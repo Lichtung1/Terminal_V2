@@ -60,6 +60,16 @@
     },
     {
       "date": "03-15-85",
+      "time": "09:20 AM",
+      "attributes": "FILE",
+      "size": 15432,
+      "name": "MANIFLD.TXT",
+      "extension": "TXT",
+      "type": "TEXT",
+      "description": "Manuscript on Hyperdimensional Information Encoding"
+    },
+    {
+      "date": "03-15-85",
       "time": "02:15 PM",
       "attributes": "FILE",
       "size": 8192,
@@ -153,16 +163,6 @@
           "extension": "COM",
           "type": "APPLICATION",
           "description": "Command interpreter"
-        },
-        {
-          "date": "03-15-85",
-          "time": "09:20 AM",
-          "attributes": "FILE",
-          "size": 15432,
-          "name": "MANIFLD.TXT",
-          "extension": "TXT",
-          "type": "TEXT",
-          "description": "Manuscript on Hyperdimensional Information Encoding"
         },
         {
           "date": "03-15-85",
