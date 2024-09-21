@@ -1,0 +1,11 @@
+; ANALYZE.EXE
+; Data Analysis Tool
+
+START:
+    MOV AX, DATA_SEG
+    MOV DS, AX
+    ; Analyze compression results
+    CALL PROCESS_DATA
+    ; Generate reports
+    CALL GENERATE_REPORT
+    RET

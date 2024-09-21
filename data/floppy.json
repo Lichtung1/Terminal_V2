@@ -1,0 +1,325 @@
+{
+  "volume": "RESEARCH",
+  "directory": "A:\\",
+  "files": [
+    {
+      "date": "03-15-85",
+      "time": "09:15 AM",
+      "attributes": "DIR",
+      "size": null,
+      "name": ".",
+      "description": "Current Directory"
+    },
+    {
+      "date": "03-15-85",
+      "time": "09:15 AM",
+      "attributes": "DIR",
+      "size": null,
+      "name": "..",
+      "description": "Parent Directory"
+    },
+    {
+      "date": "03-15-85",
+      "time": "10:15 AM",
+      "attributes": "FILE",
+      "size": 4096,
+      "name": "NOTES.TXT",
+      "extension": "TXT",
+      "type": "TEXT",
+      "description": "Personal notes and observations"
+    },
+    {
+      "date": "03-15-85",
+      "time": "10:30 AM",
+      "attributes": "FILE",
+      "size": 3584,
+      "name": "TO_DO_LIST.TXT",
+      "extension": "TXT",
+      "type": "TEXT",
+      "description": "Personal to-do list"
+    },
+    {
+      "date": "03-15-85",
+      "time": "12:00 PM",
+      "attributes": "FILE",
+      "size": 3072,
+      "name": "JOURNAL.TXT",
+      "extension": "TXT",
+      "type": "TEXT",
+      "description": "Daily journal entries"
+    },
+    {
+      "date": "03-15-85",
+      "time": "11:15 AM",
+      "attributes": "FILE",
+      "size": 7680,
+      "name": "HYPIMAN.TXT",
+      "extension": "TXT",
+      "type": "TEXT",
+      "description": "Notes on hyperdimensional manifolds"
+    },
+    {
+      "date": "03-15-85",
+      "time": "02:15 PM",
+      "attributes": "FILE",
+      "size": 8192,
+      "name": "SCIENCE_LOG.TXT",
+      "extension": "TXT",
+      "type": "TEXT",
+      "description": "Scientist's log entry"
+    },
+    {
+      "date": "03-15-85",
+      "time": "02:30 PM",
+      "attributes": "FILE",
+      "size": 102400,
+      "name": "IMAGE1_RESULT.JPG",
+      "extension": "JPG",
+      "type": "IMAGE",
+      "description": "Corrupted image result 1"
+    },
+    {
+      "date": "03-15-85",
+      "time": "02:31 PM",
+      "attributes": "FILE",
+      "size": 102400,
+      "name": "IMAGE2_RESULT.JPG",
+      "extension": "JPG",
+      "type": "IMAGE",
+      "description": "Corrupted image result 2"
+    },
+    {
+      "date": "03-15-85",
+      "time": "02:32 PM",
+      "attributes": "FILE",
+      "size": 102400,
+      "name": "IMAGE3_RESULT.JPG",
+      "extension": "JPG",
+      "type": "IMAGE",
+      "description": "Corrupted image result 3"
+    },
+    {
+      "date": "03-15-85",
+      "time": "02:33 PM",
+      "attributes": "FILE",
+      "size": 102400,
+      "name": "IMAGE4_RESULT.JPG",
+      "extension": "JPG",
+      "type": "IMAGE",
+      "description": "Corrupted image result 4"
+    },
+    {
+      "date": "03-15-85",
+      "time": "03:00 PM",
+      "attributes": "DIR",
+      "size": 0,
+      "name": "ARCHIVE",
+      "extension": "",
+      "type": "DIR",
+      "description": "Archive of files"
+    }
+  ],
+  "subdirectories": {
+    "ARCHIVE": {
+      "volume": "RESEARCH",
+      "directory": "A:\\ARCHIVE",
+      "files": [
+        {
+          "date": "03-15-85",
+          "time": "09:15 AM",
+          "attributes": "FILE",
+          "size": 12,
+          "name": "IO.SYS",
+          "extension": "SYS",
+          "type": "SYSTEM",
+          "description": "System boot file"
+        },
+        {
+          "date": "03-15-85",
+          "time": "09:15 AM",
+          "attributes": "FILE",
+          "size": 34,
+          "name": "MSDOS.SYS",
+          "extension": "SYS",
+          "type": "SYSTEM",
+          "description": "DOS system file"
+        },
+        {
+          "date": "03-15-85",
+          "time": "09:15 AM",
+          "attributes": "FILE",
+          "size": 56,
+          "name": "COMMAND.COM",
+          "extension": "COM",
+          "type": "APPLICATION",
+          "description": "Command interpreter"
+        },
+        {
+          "date": "03-15-85",
+          "time": "09:20 AM",
+          "attributes": "FILE",
+          "size": 15432,
+          "name": "MANIFLD.TXT",
+          "extension": "TXT",
+          "type": "TEXT",
+          "description": "Manuscript on Hyperdimensional Information Encoding"
+        },
+        {
+          "date": "03-15-85",
+          "time": "09:30 AM",
+          "attributes": "FILE",
+          "size": 22768,
+          "name": "MAIN.PRG",
+          "extension": "PRG",
+          "type": "APPLICATION",
+          "description": "Main program for data compression algorithms"
+        },
+        {
+          "date": "03-15-85",
+          "time": "09:45 AM",
+          "attributes": "FILE",
+          "size": 10240,
+          "name": "COMPRESS.BIN",
+          "extension": "BIN",
+          "type": "BINARY",
+          "description": "Binary code for advanced data compression"
+        },
+        {
+          "date": "03-15-85",
+          "time": "10:00 AM",
+          "attributes": "FILE",
+          "size": 8192,
+          "name": "RESULT.DAT",
+          "extension": "DAT",
+          "type": "DATA",
+          "description": "Experimental results data"
+        },
+        {
+          "date": "03-15-85",
+          "time": "10:45 AM",
+          "attributes": "FILE",
+          "size": 6048,
+          "name": "ANALYZE.EXE",
+          "extension": "EXE",
+          "type": "APPLICATION",
+          "description": "Data analysis tool"
+        },
+        {
+          "date": "03-15-85",
+          "time": "11:00 AM",
+          "attributes": "FILE",
+          "size": 5120,
+          "name": "MODEL.DOC",
+          "extension": "DOC",
+          "type": "DOCUMENT",
+          "description": "Model description document"
+        },
+        {
+          "date": "03-15-85",
+          "time": "11:30 AM",
+          "attributes": "FILE",
+          "size": 8256,
+          "name": "ENCODE.EXE",
+          "extension": "EXE",
+          "type": "APPLICATION",
+          "description": "Encoder program"
+        },
+        {
+          "date": "03-15-85",
+          "time": "11:45 AM",
+          "attributes": "FILE",
+          "size": 12800,
+          "name": "DATASET.CSV",
+          "extension": "CSV",
+          "type": "DATA",
+          "description": "Datasets used for testing"
+        },
+        {
+          "date": "03-15-85",
+          "time": "12:15 PM",
+          "attributes": "FILE",
+          "size": 1024,
+          "name": "FINALS.TXT",
+          "extension": "TXT",
+          "type": "TEXT",
+          "description": "Final notes before submission"
+        },
+        {
+          "date": "03-15-85",
+          "time": "12:30 PM",
+          "attributes": "FILE",
+          "size": 2048,
+          "name": "X1C0RD.TXT",
+          "extension": "TXT",
+          "type": "TEXT",
+          "description": "Corrupted code file"
+        },
+        {
+          "date": "03-15-85",
+          "time": "12:45 PM",
+          "attributes": "FILE",
+          "size": 3072,
+          "name": "UNSTDA.FIL",
+          "extension": "FIL",
+          "type": "DATA",
+          "description": "Unstable data file"
+        },
+        {
+          "date": "03-15-85",
+          "time": "01:00 PM",
+          "attributes": "FILE",
+          "size": 2048,
+          "name": "QUANTUM.BIN",
+          "extension": "BIN",
+          "type": "BINARY",
+          "description": "Quantum state experiments data"
+        },
+        {
+          "date": "03-15-85",
+          "time": "01:15 PM",
+          "attributes": "FILE",
+          "size": 4096,
+          "name": "TOPENC.PRG",
+          "extension": "PRG",
+          "type": "APPLICATION",
+          "description": "Topological encoding program"
+        },
+        {
+          "date": "03-15-85",
+          "time": "01:30 PM",
+          "attributes": "FILE",
+          "size": 512,
+          "name": "DATA_ERR.DAT",
+          "extension": "DAT",
+          "type": "DATA",
+          "description": "Data error file"
+        },
+        {
+          "date": "03-15-85",
+          "time": "01:45 PM",
+          "attributes": "FILE",
+          "size": 768,
+          "name": "LOO.PRG",
+          "extension": "PRG",
+          "type": "APPLICATION",
+          "description": "Loop program"
+        },
+        {
+          "date": "03-15-85",
+          "time": "02:00 PM",
+          "attributes": "FILE",
+          "size": 1536,
+          "name": "SYS_ERR.SYS",
+          "extension": "SYS",
+          "type": "SYSTEM",
+          "description": "System error file"
+        }
+      ],
+      "fileCount": 20,
+      "totalSize": 112606
+    }
+  },
+  "fileCount": 12,
+  "totalSize": 533430,
+  "freeSpace": 0
+}

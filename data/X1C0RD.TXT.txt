@@ -1,0 +1,4 @@
+Corrupted Code Fragment:
+G4B@#8F*^&$
+Undefined symbols and unexpected tokens detected.
+Data loss or corruption evident

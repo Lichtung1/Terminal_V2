@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoyaMoya Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include the terminal font -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <!-- Add viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="terminal">
+        <div id="output"></div>
+    </div>
+    <div id="input-line">
+        <span id="prompt">M:\></span>
+        <input type="text" id="command-input" autofocus autocomplete="off">
+    </div>
+    <script src="utils.js"></script>
+    <script src="asciiArt.js"></script>
+    <script src="corruption.js"></script>
+    <script src="displayFunctions.js"></script>
+    <script src="commands.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

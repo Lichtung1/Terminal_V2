@@ -1,0 +1,199 @@
+/* Global Styles */
+body, html {
+    /* Remove any fixed heights to allow content to expand */
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: #9900ff;
+    font-family: 'VT323', 'Courier New', monospace;
+    font-size: 16px;
+}
+
+#terminal {
+    /* Remove any fixed height constraints */
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#output {
+    /* Remove height constraints and allow content to expand */
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    overflow: visible; /* Allow content to expand without scroll bars */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#input-line {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: #9900ff;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+#prompt {
+    margin-right: 5px;
+}
+
+#command-input::placeholder {
+    color: #9900ff;
+}
+
+/* ASCII Art Styling */
+.ascii-art {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-size: 8px; /* Adjust as needed */
+    line-height: 8px; /* Match line-height to font-size */
+    white-space: pre; /* Preserve whitespace and line breaks */
+    width: 100%; /* Ensure the element takes full available width */
+    margin: 0;
+    padding: 0;
+    overflow: visible; /* Allow content to expand without scroll bars */
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 600px) {
+    .ascii-art {
+        font-size: 6px;
+        line-height: 6px;
+    }
+    #command-input {
+        font-size: 14px;
+    }
+    /* Adjust image gallery if needed */
+    .image-gallery img {
+        width: 100%;
+        margin: 1% 0;
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #9900ff;
+    animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
+
+/* Glitch Effect */
+.glitch {
+    position: relative;
+    color: #9900ff;
+    display: inline-block; /* Ensure glitch element is treated as block or inline-block */
+    overflow: hidden; /* Hide overflow from pseudo-elements */
+    margin-bottom: 1em; /* Add space below the glitch effect */
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden; /* Ensure pseudo-elements don't overflow */
+}
+
+.glitch::before {
+    animation: glitchTop 0.3s infinite linear alternate-reverse;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::after {
+    animation: glitchBottom 0.5s infinite linear alternate-reverse;
+    clip: rect(0, 0, 0, 900px);
+}
+
+@keyframes glitchTop {
+    0% {
+        clip: rect(2px, 9999px, 44px, 0);
+        transform: translate(2px, -2px);
+    }
+    100% {
+        clip: rect(12px, 9999px, 64px, 0);
+        transform: translate(-2px, -2px);
+    }
+}
+
+@keyframes glitchBottom {
+    0% {
+        clip: rect(85px, 9999px, 140px, 0);
+        transform: translate(-2px, 0px);
+    }
+    100% {
+        clip: rect(45px, 9999px, 90px, 0);
+        transform: translate(0px, 2px);
+    }
+}
+
+.normal-text {
+    font-family: 'VT323', monospace;
+    color: inherit;
+}
+
+@keyframes glitchTop {
+    0% {
+        clip: rect(2px, 9999px, 44px, 0);
+        transform: translate(2px, -2px);
+    }
+    100% {
+        clip: rect(12px, 9999px, 64px, 0);
+        transform: translate(-2px, -2px);
+    }
+}
+
+@keyframes glitchBottom {
+    0% {
+        clip: rect(85px, 9999px, 140px, 0);
+        transform: translate(-2px, 0px);
+    }
+    100% {
+        clip: rect(45px, 9999px, 90px, 0);
+        transform: translate(0px, 2px);
+    }
+}
+
+/* Style for images displayed when 'open' command is used */
+/* Ensure images are responsive */
+.displayed-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    cursor: default;
+}
+
+/* Image Gallery Styling */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.image-gallery img {
+    width: 45%;
+    margin: 2%;
+    cursor: default; /* Change cursor to default */
+}

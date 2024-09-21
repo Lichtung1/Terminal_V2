@@ -1,0 +1,4 @@
+System File Error:
+Corrupted system data detected.
+\0\0\0\0
+System instability likely

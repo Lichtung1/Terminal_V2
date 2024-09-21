@@ -1,0 +1,7 @@
+// LOO.PRG - Placeholder Program
+#include <stdio.h>
+
+int main() {
+    printf("LOO.PRG Execution Placeholder.\n");
+    return 0;
+}

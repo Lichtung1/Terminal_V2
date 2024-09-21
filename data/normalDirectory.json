@@ -1,0 +1,95 @@
+{
+  "volume": "BEYOND",
+  "directory": "M:\\",
+  "files": [
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "DIR",
+      "size": null,
+      "name": ".",
+      "description": "Current Directory"
+    },
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "DIR",
+      "size": null,
+      "name": "..",
+      "description": "Parent Directory"
+    },
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "FILE",
+      "size": 30000,
+      "name": "PLAYLIST.MP3",
+      "extension": "MP3",
+      "type": "AUDIO",
+      "description": "Music Playlist"
+    },
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "FILE",
+      "size": 66666,
+      "name": "PROGRAM1.EXE",
+      "extension": "EXE",
+      "type": "APPLICATION",
+      "description": "Program 1"
+    },
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "FILE",
+      "size": 66666,
+      "name": "PROGRAM2.EXE",
+      "extension": "EXE",
+      "type": "APPLICATION",
+      "description": "Program 2"
+    },
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "FILE",
+      "size": 10000,
+      "name": "IMAGE1.JPG",
+      "extension": "JPG",
+      "type": "IMAGE",
+      "description": "Image 1"
+    },
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "FILE",
+      "size": 10000,
+      "name": "IMAGE2.JPG",
+      "extension": "JPG",
+      "type": "IMAGE",
+      "description": "Image 2"
+    },
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "FILE",
+      "size": 10000,
+      "name": "IMAGE3.JPG",
+      "extension": "JPG",
+      "type": "IMAGE",
+      "description": "Image 3"
+    },
+    {
+      "date": "06-06-2066",
+      "time": "06:06 AM",
+      "attributes": "FILE",
+      "size": 10000,
+      "name": "IMAGE4.JPG",
+      "extension": "JPG",
+      "type": "IMAGE",
+      "description": "Image 4"
+    }
+  ],
+  "fileCount": 9,
+  "totalSize": 203332,
+  "freeSpace": 236170
+}
