@@ -8,7 +8,14 @@ async function displayTextFile(fileName) {
             `data${currentDirPath}/${fileName.toUpperCase()}`,
             `data${currentDirPath}/${fileName.toUpperCase()}.txt`,
             `data${currentDirPath}/${fileName.toLowerCase()}`,
-            `data${currentDirPath}/${fileName.toLowerCase()}.txt`
+            `data${currentDirPath}/${fileName.toLowerCase()}.txt`,
+            // Fallback to data directory
+            `data/${fileName}`,
+            `data/${fileName}.txt`,
+            `data/${fileName.toUpperCase()}`,
+            `data/${fileName.toUpperCase()}.txt`,
+            `data/${fileName.toLowerCase()}`,
+            `data/${fileName.toLowerCase()}.txt`
         ];
 
         let response;

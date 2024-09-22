@@ -9,7 +9,7 @@ This study introduces a novel data compression algorithm leveraging the topologi
 THEORETICAL FRAMEWORK:
 Building upon Jacob Bekenstein's conjecture that black hole entropy is proportional to the area of the event horizon, we extend these principles to information theory:
 
-S ≤ A / (4ℓP^2)
+S ≤ A / (4ℓ_P^2)
 
 Where S represents information entropy, A denotes the area of the bounding surface, and ℓP is the Planck length.
 

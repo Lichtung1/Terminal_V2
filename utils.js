@@ -4,14 +4,15 @@
 function displayOutput(text, isHTML = false, isASCIIArt = false) {
     const outputElement = document.getElementById('output');
 
+    // Handle ASCII art separately as before
     if (isASCIIArt) {
-        // Create a pre element for ASCII art
         const preElement = document.createElement('pre');
-        preElement.className = 'ascii-art';
+        preElement.className = 'ascii-art output-line'; 
         preElement.textContent = text;
         outputElement.appendChild(preElement);
     } else {
         const outputLine = document.createElement('div');
+        outputLine.className = 'output-line'; 
 
         if (isHTML) {
             outputLine.innerHTML = text;

@@ -20,46 +20,6 @@
     },
     {
       "date": "03-15-85",
-      "time": "10:15 AM",
-      "attributes": "FILE",
-      "size": 4096,
-      "name": "NOTES.TXT",
-      "extension": "TXT",
-      "type": "TEXT",
-      "description": "Personal notes and observations"
-    },
-    {
-      "date": "03-15-85",
-      "time": "10:30 AM",
-      "attributes": "FILE",
-      "size": 3584,
-      "name": "TO_DO.TXT",
-      "extension": "TXT",
-      "type": "TEXT",
-      "description": "Personal to-do list"
-    },
-    {
-      "date": "03-15-85",
-      "time": "12:00 PM",
-      "attributes": "FILE",
-      "size": 3072,
-      "name": "JOURNAL.TXT",
-      "extension": "TXT",
-      "type": "TEXT",
-      "description": "Daily journal entries"
-    },
-    {
-      "date": "03-15-85",
-      "time": "11:15 AM",
-      "attributes": "FILE",
-      "size": 7680,
-      "name": "HYPTRANS.TXT",
-      "extension": "TXT",
-      "type": "TEXT",
-      "description": "Notes on hyperdimensional transforms"
-    },
-    {
-      "date": "03-15-85",
       "time": "09:20 AM",
       "attributes": "FILE",
       "size": 15432,
@@ -67,16 +27,6 @@
       "extension": "TXT",
       "type": "TEXT",
       "description": "Manuscript on Hyperdimensional Information Encoding"
-    },
-    {
-      "date": "03-15-85",
-      "time": "02:15 PM",
-      "attributes": "FILE",
-      "size": 8192,
-      "name": "SCIENCE_LOG.TXT",
-      "extension": "TXT",
-      "type": "TEXT",
-      "description": "Scientist's log entry"
     },
     {
       "date": "03-15-85",
@@ -117,7 +67,7 @@
       "extension": "JPG",
       "type": "IMAGE",
       "description": "Corrupted image result 4"
-    },
+    },    
     {
       "date": "03-15-85",
       "time": "03:00 PM",
@@ -134,6 +84,56 @@
       "volume": "RESEARCH",
       "directory": "A:\\ARCHIVE",
       "files": [
+        {
+          "date": "03-15-85",
+          "time": "10:15 AM",
+          "attributes": "FILE",
+          "size": 4096,
+          "name": "NOTES.TXT",
+          "extension": "TXT",
+          "type": "TEXT",
+          "description": "Personal notes and observations"
+        },
+        {
+          "date": "03-15-85",
+          "time": "10:30 AM",
+          "attributes": "FILE",
+          "size": 3584,
+          "name": "TO_DO.TXT",
+          "extension": "TXT",
+          "type": "TEXT",
+          "description": "Personal to-do list"
+        },
+        {
+          "date": "03-15-85",
+          "time": "12:00 PM",
+          "attributes": "FILE",
+          "size": 3072,
+          "name": "JOURNAL.TXT",
+          "extension": "TXT",
+          "type": "TEXT",
+          "description": "Daily journal entries"
+        },
+        {
+          "date": "03-15-85",
+          "time": "11:15 AM",
+          "attributes": "FILE",
+          "size": 7680,
+          "name": "HYPTRANS.TXT",
+          "extension": "TXT",
+          "type": "TEXT",
+          "description": "Notes on hyperdimensional transforms"
+        },
+        {
+          "date": "03-15-85",
+          "time": "02:15 PM",
+          "attributes": "FILE",
+          "size": 8192,
+          "name": "SCIENCE_LOG.TXT",
+          "extension": "TXT",
+          "type": "TEXT",
+          "description": "Scientist's log entry"
+        },
         {
           "date": "03-15-85",
           "time": "09:15 AM",
@@ -315,11 +315,11 @@
           "description": "System error file"
         }
       ],
-      "fileCount": 20,
-      "totalSize": 112606
+      "fileCount": 25,
+      "totalSize": 139230
     }
   },
-  "fileCount": 12,
+  "fileCount": 8,
   "totalSize": 533430,
   "freeSpace": 0
 }
