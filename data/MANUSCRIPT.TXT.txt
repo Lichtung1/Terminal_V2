@@ -23,13 +23,13 @@ METHODOLOGY:
    Apply a projection of S^n onto a complex plane C.
 
 3. Fourier transform Encoding:
-   Utilize a modified Fourier transform for data into frequency domain.
+   Utilize a modified Fourier transform for data into the frequency domain.
 
 4. Quantum State Superposition:
    Incorporate quantum superposition principles for multi-state storage.
 
 RESULTS:
-Preliminary tests demonstrate compression ratios exceeding 666:1 for tested data classes. Upon measurement of the compressed data, state vector reduction occured, leading to partial information decoherence. This process results in some irreversible data changes.
+Preliminary tests demonstrate compression ratios exceeding 666:1 for tested data classes. Upon measurement of the compressed data, state vector reduction occurred, leading to partial information decoherence. This process results in some irreversible data changes.
 
 OBSERVATIONS:
 1. Nanoscale regions within storage media exhibit anomalous quantum fluctuations.
@@ -41,8 +41,8 @@ The compression process might have created small changes in the quantum space, a
 
 PROPOSED EXTENSIONS:
 1. Look into encoding complex information.
-2. Explore using the method recusively for extremely high storage.
+2. Explore using the method recursively for extremely high storage.
 4. Study how this affects local space measurements when scaled up.
 
 CAUTIONARY NOTE:
-Early results suggest we might be disturbing local quantum fields. It's important to use strict safety measures in future experiments.
+Early results suggest we might be disturbing local quantum fields. It's important to use strict safety measures in future experiments. Refer to aberrations in image4_result.jpg.
