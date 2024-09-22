@@ -1,57 +1,59 @@
 // Commands
 const commands = {
     'help': function() {
-    const helpText = `
-Available commands:
-- help           Displays this help text.
+        const helpText = `
+    Available commands:
+    - help           Displays this help text.
 
-- dir            Lists directories and files.
-- cd             Changes the current directory.
-- pwd            Displays the current directory path.
+    - dir            Lists directories and files.
+    - cd             Changes the current directory.
+    - cls            Clears the screen.
 
-- run            Executes a program.
-- open           Opens a file.
+    - run            Executes a program.
+    - open           Opens a file.
+    - floppy         Loads content from a floppy disk.
+    - eject          Ejects the floppy disk.
 
-- cls            Clears the screen.
-- date           Displays the current date and time.
+    - date           Displays the current date and time.
+    - echo           The void looks back.
+    - corrupt        [CORRUPT ME...]
 
-- echo           The void looks back.
-- corrupt        [C0RЯЦP┴ MΣ...]
+    Note:
+    - Include the file extension (e.g., '.TXT') when specifying files or programs.
+    - Use 'run' to execute programs (e.g., 'run PROGRAM1.EXE').
+    - Use 'open' to open files (e.g., 'open NOTES.TXT').
+    - Use 'cd' to change directories (e.g., 'cd ARCHIVE'). Use 'cd ..' to go back.
+        `;
+        displayOutput(helpText);
+    },
+// commands.js
 
-- floppy         Loads content from a floppy disk.
-- eject          Ejects the floppy disk.
+    'dir': function() {
+        const dirData = currentDirectory;
+        let dirText = `Volume in drive ${dirData.volume} is ${dirData.volume}
+    Directory of ${dirData.directory}
 
-Note:
-- **Include the file extension** (e.g., '.TXT') when specifying files or programs.
-- To **execute a program** (e.g., '.EXE'), use the \`run\` command.
-  - Example: \`run PROGRAM1.EXE\`
-- To **open a file** (e.g., '.TXT', '.DOC'), use the \`open\` command.
-  - Example: \`open NOTES.TXT\`
-- Use \`cd\` to change directories.
-  - Example: \`cd ARCHIVE\`
-  - Go back to the parent directory with \`cd ..\`
     `;
-    displayOutput(helpText);
-},
-'dir': function(args) {
-    const dirData = currentDirectory;
-    let dirText = `Volume in drive ${dirData.volume} is ${dirData.volume}
-Directory of ${dirData.directory}
 
-`;
+        dirData.files.forEach(file => {
+            const isDir = file.attributes === 'DIR';
+            const sizeStr = isDir ? '<DIR>'.padStart(10) : file.size.toLocaleString().padStart(10);
+            const fileType = isDir ? 'DIR' : (file.type || 'FILE').toUpperCase();
 
-    dirData.files.forEach(file => {
-        const isDir = file.attributes === 'DIR';
-        const sizeStr = isDir ? '<DIR>'.padStart(10) : file.size.toLocaleString().padStart(10);
-        const fileType = isDir ? 'DIR' : (file.type || 'FILE').toUpperCase();
+            dirText += `${file.name.padEnd(15)} ${fileType.padEnd(12)} ${sizeStr}  ${file.date}\n`;
+            // Removed the time column
+        });
 
-        dirText += `${file.name.padEnd(15)} ${fileType.padEnd(12)} ${sizeStr}  ${file.date}  ${file.time}\n`;
-    });
+        let freeSpaceStr = '';
+        if (dirData.freeSpace !== undefined) {
+            freeSpaceStr = dirData.freeSpace <= 0
+                ? `0 bytes free (Disk capacity exceeded!)`
+                : `${dirData.freeSpace.toLocaleString()} bytes free`;
+        }
 
-    dirText += `\n${dirData.fileCount} File(s)   ${dirData.totalSize.toLocaleString()} bytes\n${dirData.freeSpace.toLocaleString()} bytes free`;
-    displayOutput(dirText);
+        dirText += `\n${dirData.fileCount} File(s)   ${dirData.totalSize.toLocaleString()} bytes\n${freeSpaceStr}`;
+        displayOutput(dirText);
 
-    dirText += `\n${dirData.fileCount} File(s)   ${dirData.totalSize.toLocaleString()} bytes\n${freeSpaceStr}`;    
     },
     'cls': async function() {
         const outputElement = document.getElementById('output');
@@ -74,6 +76,7 @@ Directory of ${dirData.directory}
 
         // Clear the screen
         outputElement.innerHTML = '';
+
     },
     'run': function(args) {
     if (args.length === 0) {
@@ -230,8 +233,8 @@ Mᴀɴɪғᴇsᴛɪɴɢ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴄʏʙᴇʀ ʀɪᴛᴜᴀʟ: �
 },
 
 
-// Add the 'cd' command to the commands object
-'cd': function(args) {
+    // 'cd' command to the commands object
+    'cd': function(args) {
     if (args.length === 0) {
         displayOutput("Error: No directory specified. Usage: cd [directory name]. Example: cd ARCHIVE");
         return;
@@ -239,33 +242,34 @@ Mᴀɴɪғᴇsᴛɪɴɢ ᴛʜᴇ sᴇᴄᴏɴᴅ ᴄʏʙᴇʀ ʀɪᴛᴜᴀʟ: �
 
     let dirNameInput = args.join(' ').toUpperCase();
 
-    // Special case to handle 'cd ..' to go back to the parent directory
     if (dirNameInput === '..') {
+        // handle moving to parent directory
         if (currentDirectory.parentDirectory) {
             currentDirectory = currentDirectory.parentDirectory;
-            displayOutput(`Moved to directory ${currentDirectory.directory}`);
-            commands['dir'](); // Display the contents of the new current directory
+            updatePrompt();
+            commands['dir']();
         } else {
             displayOutput("You are already at the root directory.");
         }
         return;
     }
 
-    // Find the directory in the current directory's files
-    const dirEntry = currentDirectory.files.find(f => f.name.toUpperCase() === dirNameInput && f.attributes === 'DIR');
+    // Find the directory in currentDirectory.files (Take note of case sensitivity)
+    const dirEntry = currentDirectory.files.find(f => f.attributes === 'DIR' && f.name.toUpperCase() === dirNameInput);
 
     if (dirEntry) {
         // Check if subdirectory data exists
-        if (currentDirectory.subdirectories && currentDirectory.subdirectories[dirEntry.name]) {
-            // Set the parent directory reference
-            currentDirectory.subdirectories[dirEntry.name].parentDirectory = currentDirectory;
+        const subDirName = dirEntry.name; // Original name from dirEntry, possibly in mixed case
+        const subDirKey = Object.keys(currentDirectory.subdirectories).find(key => key.toUpperCase() === subDirName.toUpperCase());
+
+        if (subDirKey) {
+            // Set parent directory reference
+            currentDirectory.subdirectories[subDirKey].parentDirectory = currentDirectory;
 
             // Move to the new directory
-            currentDirectory = currentDirectory.subdirectories[dirEntry.name];
-            displayOutput(`Moved to directory ${currentDirectory.directory}`);
-            commands['dir'](); // Display the contents of the new current directory
-            // // After updating currentDirectory
-            // updatePrompt();
+            currentDirectory = currentDirectory.subdirectories[subDirKey];
+            updatePrompt();
+            commands['dir']();
         } else {
             displayOutput(`Error: Directory data for '${dirNameInput}' not found.`);
         }

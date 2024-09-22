@@ -31,7 +31,7 @@ function initTerminal() {
         if (e.key === 'Enter') {
             const input = inputField.value;
             processInput(input);
-            inputField.value = '';
+            // Remove inputField.value = ''; from here
         }
     });
 
@@ -45,10 +45,15 @@ function initTerminal() {
 // Process user input
 function processInput(input) {
     const outputElement = document.getElementById('output');
+    const inputField = document.getElementById('command-input'); 
     const fullInput = input.trim();
 
     // Echo the command
     outputElement.innerHTML += `${currentDirectory.directory}> ${fullInput}\n`;
+
+    // Clear the input field immediately after echoing
+    inputField.value = '';
+    inputField.focus(); // Ensure the input field remains focused
 
     if (expectingCombination) {
         processCombinationInput(fullInput);
@@ -59,21 +64,25 @@ function processInput(input) {
     const lowerInput = fullInput.toLowerCase();
 
     // Check for matching commands starting from the full input
+    let commandFound = false;
     for (let i = inputParts.length; i > 0; i--) {
         const commandAttempt = inputParts.slice(0, i).join(' ').toLowerCase();
         const args = inputParts.slice(i);
 
         if (commands.hasOwnProperty(commandAttempt)) {
             commands[commandAttempt](args);
-            return;
+            commandFound = true;
+            break;
         }
     }
 
-    // Handle unrecognized commands
-    if (lowerInput === 'exit') {
-        displayOutput('Shutting down...');
-    } else {
-        displayOutput(`Error: Command '${fullInput}' not recognized. Type 'help' for a list of available commands.`);
+    if (!commandFound) {
+        // Handle unrecognized commands
+        if (lowerInput === 'exit') {
+            displayOutput('Shutting down...');
+        } else {
+            displayOutput(`Error: Command '${fullInput}' not recognized. Type 'help' for a list of available commands.`);
+        }
     }
 }
 

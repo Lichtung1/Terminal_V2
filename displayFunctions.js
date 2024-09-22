@@ -1,28 +1,28 @@
 // Function to display text file content (assuming text files are also in data folder)
 async function displayTextFile(fileName) {
     try {
-        const possibleFileNames = [
-            `data/${fileName}`,
-            `data/${fileName}.txt`,
-            `data/${fileName.toUpperCase()}`,
-            `data/${fileName.toUpperCase()}.txt`,
-            `data/${fileName.toLowerCase()}`,
-            `data/${fileName.toLowerCase()}.txt`
+        const currentDirPath = currentDirectory.directory.replace(/\\/g, '/');
+        const filePathOptions = [
+            `data${currentDirPath}/${fileName}`,
+            `data${currentDirPath}/${fileName}.txt`,
+            `data${currentDirPath}/${fileName.toUpperCase()}`,
+            `data${currentDirPath}/${fileName.toUpperCase()}.txt`,
+            `data${currentDirPath}/${fileName.toLowerCase()}`,
+            `data${currentDirPath}/${fileName.toLowerCase()}.txt`
         ];
 
         let response;
         let found = false;
 
-        // Try each possible file name
-        for (let i = 0; i < possibleFileNames.length; i++) {
+        for (let path of filePathOptions) {
             try {
-                response = await fetch(possibleFileNames[i]);
+                response = await fetch(path);
                 if (response.ok) {
                     found = true;
                     break;
                 }
             } catch (err) {
-                continue; // If fetch throws an error, try the next one
+                continue;
             }
         }
 
@@ -33,7 +33,7 @@ async function displayTextFile(fileName) {
         const textContent = await response.text();
         displayOutput(textContent);
     } catch (error) {
-        displayCorruptedHint(`Error: ${error.message}`);
+        displayOutput(`Error: ${error.message}`);
     }
 }
 

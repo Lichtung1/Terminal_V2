@@ -1,4 +1,5 @@
 // utils.js
+
 // Function to display output to the terminal
 function displayOutput(text, isHTML = false, isASCIIArt = false) {
     const outputElement = document.getElementById('output');
@@ -21,7 +22,12 @@ function displayOutput(text, isHTML = false, isASCIIArt = false) {
         outputElement.appendChild(outputLine);
     }
 
+    // Scroll to bottom
     scrollToBottom();
+
+    // Refocus the input field
+    const inputField = document.getElementById('command-input');
+    inputField.focus();
 }
 
 // Function to scroll the output to the bottom

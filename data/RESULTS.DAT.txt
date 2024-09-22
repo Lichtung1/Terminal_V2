@@ -1,4 +1,4 @@
 Experiment Results:
-Compression Ratio: 1,200,000:1
+Compression Ratio: 666:1
 Data Integrity: 98%
-Anomalies Detected: 1 instance(s) of data decoherence
+Anomalies Detected: 4 instance(s) of data decoherence
